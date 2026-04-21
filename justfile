@@ -3,7 +3,7 @@ default:
 
 build:
     cd RuoYi-Vue-springboot3 && mvn clean compile -DskipTests
-    cd RuoYi-Vue3-v3.8.8 && npm install
+    cd RuoYi-Vue3-v3.8.8 && bun install
 
 start-redis:
     mkdir -p .local/redis
@@ -17,7 +17,7 @@ start-backend:
     cd RuoYi-Vue-springboot3 && mvn -pl ruoyi-admin spring-boot:run &
 
 start-frontend:
-    cd RuoYi-Vue3-v3.8.8 && (test -d node_modules || npm install) && npm run dev &
+    cd RuoYi-Vue3-v3.8.8 && (test -d node_modules || bun install) && bun run dev &
 
 start-all:
     just start-redis
