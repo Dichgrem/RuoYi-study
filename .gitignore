@@ -9,3 +9,5 @@ node_modules/
 .idea/
 *.iml
 .vscode/
+AGENTS.md
+todo.md
